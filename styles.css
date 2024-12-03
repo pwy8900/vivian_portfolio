@@ -1,0 +1,483 @@
+html, body {
+    height: 100%; /* Required to ensure the body occupies full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 20px 0; /* Vertical padding */
+    max-width: 1200px; /* Set a max width for the header */
+    margin: 0 auto; /* Center the header */
+}
+
+.content {
+    align-items: center; /* Center items vertically */
+    padding: 20px 20px; /* Add padding to both sides */
+    max-width: 950px; /* Set a max width for the content */
+    margin: 0 auto; /* Center the content */
+    flex: 1; /* Allow content to grow and fill space */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+header img {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    border-radius: 50%; /* This creates the circle effect */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-right: 5px; /* Reduce space between the picture and links */
+    margin-left: 120px;
+}
+
+nav {
+    display: flex; /* Use Flexbox for navigation */
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-end; /* Align items to the right */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-right: 140px; /* Remove default padding */
+}
+
+nav ul li {
+    margin-bottom: 5px; /* Space between links */
+}
+
+nav ul a:hover {
+    color: #179BAE;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the inherited color for links */
+}
+
+section {
+    margin: 20px auto; /* Center section with margin */
+    max-width: 1200px; /* Set a max width for the section */
+    padding-bottom: 50px; /* Prevent content from overlapping with footer */
+}
+
+footer {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 5px 20px; /* Set padding to 5px */
+    font-size: 12px; /* Optional: Adjust font size for better visibility */
+    width: 100%; /* Footer to stretch full width */
+    margin: 0; /* No margin */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Ensure space is distributed */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the footer */
+    margin: 0 auto; /* Center the footer */
+    width: 100%; /* Ensure footer container takes full width */
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal space */
+    display: flex; /* Use flexbox to center content inside */
+    flex-direction: column; /* Optional: align items vertically */
+    align-items: center; /* Center contents of each section */
+}
+
+.footer-section:last-child {
+    margin-right: 0; /* Remove margin from last section */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 5px; /* Space between links */
+}
+
+.footer-section a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text for links */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-media {
+    display: flex; /* Flexbox for horizontal layout of icons */
+    justify-content: center; /* Center icons inside their section */
+    margin-top: 10px; /* Optional: add a margin for spacing from text */
+}
+
+.social-media a {
+    margin: 0 5px; /* Space between icons */
+}
+
+.social-media img {
+    margin-top: 3px;
+    justify-content: center; /* Center icons inside their section */
+}
+
+.footer-center {
+    text-align: center; /* Center the text */
+    flex: 1; /* Ensure it takes equal space as others */
+}
+
+.footer-bottom {
+    text-align: center; /* Center the bottom text */
+    margin-top: 5px; /* Space above bottom text */
+}
+
+.highlight {
+    color: #179BAE;
+}
+
+h2 {
+    color: #179BAE;
+}
+
+.hover-effect {
+    position: relative; /* Required for the pseudo-element */
+    color: #179BAE; /* Blue color for the link */
+    text-decoration: underline; /* Underline by default */
+    overflow: hidden; /* Hide overflow for the pseudo-element */
+}
+
+.hover-effect::after {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 0;
+    bottom: -100%; /* Start below the text */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(23, 155, 174, 0.5); /* Blue color with transparency */
+    transition: bottom 0.3s ease; /* Animate the bottom position */
+    z-index: -1; /* Place it behind the text */
+    opacity: 0; /* Start as invisible */
+}
+
+.hover-effect:hover::after {
+    bottom: 0; /* Move it to the bottom of the text on hover */
+    opacity: 1; /* Make it visible on hover */
+}
+
+.hover-effect:hover {
+    text-decoration: none; /* Remove the underline on hover */
+}
+
+/* Personal Updates Section Styles */
+.personal-update {
+    margin: 20px 0 20px 0; /* Remove auto margin for left alignment */
+    font-family: Arial, sans-serif;
+    max-width: 600px; /* Limit the width */
+    height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Padding inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    /* Optional: Align with title */
+    align-self: flex-start; /* Align to the left */
+}
+
+
+.event-box {
+    font-family: "Roboto Mono", monospace;
+    font-size: small;
+    background-color: #257180;
+    padding: 10px;
+    color: white;
+    margin: 5px 0; /* Space between boxes */
+}
+
+/* Align the heading with the boxes */
+.personal-update h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    text-align: left; /* Align the title to the left */
+}
+
+/* Work at a Glance Section Styles */
+.work-gallery {
+    position: relative; /* Positioning for the button */
+    max-width: 600px; /* Limit the width */
+    margin: 20px auto; /* Center the gallery */
+}
+
+.work-gallery img {
+    width: 100%; /* Make image responsive */
+    border-radius: 4px; /* Optional: Rounded corners */
+}
+
+#next-button {
+    position: absolute; /* Position the button over the image */
+    top: 50%; /* Center vertically */
+    right: 10px; /* Position from the right */
+    transform: translateY(-50%); /* Adjust for centering */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Updates and Gallery Container */
+.updates-gallery {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: stretch; /* Make items stretch to the same height */
+    margin: 20px 0; /* Margin above and below */
+}
+
+/* Personal Updates Section Styles */
+#personal_update {
+    margin: 0; /* Remove margin for better alignment */
+    padding: 0; /* Remove padding for consistency */
+    flex: 1; /* Allow it to grow and fill space */
+}
+
+/* Personal Update Content Styles */
+.personal-update,
+.work-gallery {
+    font-family: Arial, sans-serif;
+    max-width: 600px; /* Limit the width */
+    height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Padding inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Work at a Glance Section Styles */
+#work_at_a_glance {
+    margin-left: 20px; /* Space between sections */
+    margin-top: 0; /* Ensure no top margin */
+    flex: 1; /* Allow it to grow and fill space */
+}
+
+/* Heading Styles */
+h2 {
+    margin: 0; /* Remove margin from headings */
+    padding: 0; /* Remove padding from headings */
+}
+
+.flashcard-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of flashcards */
+    justify-content: center; /* Center the flashcards */
+    gap: 20px; /* Add gap between flashcards */
+    margin: 20px; /* Margin around the container */
+}
+
+.flashcard {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 200px;
+    height: 250px; /* Fixed height for the flashcard */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.flashcard:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.flashcard img {
+    width: 100%; /* Full width of the flashcard */
+    max-height: 110px; /* Adjust height to fit upper third */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    margin-bottom: 10px; /* Space between image and description */
+}
+
+.flashcard p {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    margin: 0;
+    color: black;
+}
+
+.flashcard-container a {
+    text-decoration: none; /* Removes the underline */
+}
+
+.links-row {
+    text-align: center; /* Center the links row */
+}
+
+.link-icon {
+    width: 20px; /* Set the width of the icons */
+    height: 20px; /* Set the height of the icons */
+    vertical-align: middle; /* Align the icon vertically with the text */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.links-row a {
+    color: #179BAE; /* Change to your desired link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.links-row a:hover {
+    color: #179BAE
+}
+
+
+.links-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.link-item {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-decoration: none; /* Remove underline */
+    color: #179BAE; /* Change to your preferred color */
+    margin: 0 20px; /* Add space between each link item */
+}
+
+.separator {
+    margin: 0 15px; /* Space around the separator */
+    font-size: 20px; /* Adjust size of the separator if needed */
+}
+
+
+.link-item img {
+    margin-bottom: 5px; /* Space between icon and text */
+    width: 30px; /* Optional: Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    align-items: center;
+}
+
+
+.content-oga {
+    align-items: center; /* Center items vertically */
+    padding: 20px 20px; /* Add padding to both sides */
+    max-width: 950px; /* Set a max width for the content */
+    margin: 0 auto; /* Center the content */
+    flex: 1; /* Allow content to grow and fill space */
+    text-align: center; /* Center text within this container */
+}
+
+.content-oga h3 {
+    margin: 20px 0; /* Add margin for spacing above and below */
+    text-align: center; /* Ensure the heading is centered */
+}
+
+.subtitle {
+    color: black
+}
+
+.solution {
+    color: #179BAE;
+}
+
+.content-oga ul {
+    list-style-position: inside; /* Makes bullets inside the list */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    color: #179BAE;
+    font: bold;
+}
+
+.content-oga li {
+    margin-left: 0; /* Ensures no extra space to the left of the text */
+    color: #179BAE;
+    font: bold;
+}
+
+.image-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between images */
+    align-items: center; /* Center images vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.image-row img {
+    height: auto; /* Maintain aspect ratio */
+    width: 23%; /* Set width to fit four images in a row with some spacing */
+    margin: 1%; /* Add some margin around images */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
+.content-oga ul {
+    list-style-position: inside; /* Keeps bullets inside the list */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    color: black; /* Change bullet text color to black */
+}
+
+.content-oga ul li {
+    margin-left: 0; /* Ensures no extra space to the left of the text */
+    color: black !important; /* Force color to black */
+    font-weight: bold; /* Keep the text bold */
+    font-size: auto;
+}
+
+
+.content-oga .black_bullet {
+    list-style-type: disc; /* Use disc bullets */
+    padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.content-oga .black_bullet li {
+    color: black; /* Set text color to black */
+    margin-left: 0; /* Ensure no extra space to the left of the text */
+    padding-left: 0; /* Remove padding to the left of the list item */
+    font-weight: normal; /* Ensure text is not bold */
+    margin-bottom: 10px;
+}
+
+/* Optional: Adjust bullet spacing */
+.content-oga .black_bullet li::marker {
+    margin-right: 0; /* Adjust space between bullet and text */
+}
+
+
+.social-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 20px 0; /* Add some vertical spacing */
+}
+
+.social-item {
+    display: flex;
+    align-items: center; /* Align icon and text */
+    margin: 10px 0; /* Add spacing between items */
+}
+
+.social-item img {
+    margin-right: 10px; /* Space between icon and text */
+}

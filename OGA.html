@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivian's Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./img/IMG_2608.jpg">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <img src="./img/IMG_2608.jpg" alt="Profile Picture">
+        <nav>
+            <ul>
+                <li><b><a href="index.html">Home</a></b></li>
+                <li><b><a href="project.html">Project</a></b></li>
+                <li><b><a href="contact.html">Contact</a></b></li>
+                <li><b><a href="./Vivian_Yu_Resume.pdf">Résumé</a></b></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-oga">
+        <h1>University of Washington Global Impact Tracker for Office of Global Affairs</h1>
+        <p></p>
+    
+        <!-- Links Row -->
+        <div class="links-row">
+            <a href="https://www.washington.edu/global/publications/" target="_blank">
+                <div class="link-item">
+                    <img src="./img/link.png" alt="Website Icon" class="link-icon hover-effect">
+                    <span>Website</span>
+                </div>
+            </a> | 
+            <a href="https://ischool.uw.edu/capstone/projects/2023/uw-global-impact-tracker-office-global-affairs" target="_blank">
+                <div class="link-item">
+                    <img src="./img/preview.png" alt="Project Details Icon" class="link-icon hover-effect">
+                    <span>Project Details</span>
+                </div>
+            </a> | 
+            <a href="https://github.com/jamesjwkim/rosetta-rough" target="_blank">
+                <div class="link-item">
+                    <img src="./img/code.png" alt="Code Icon" class="link-icon hover-effect">
+                    <span>Code</span>
+                </div>
+            </a>
+        </div>
+        
+        
+    
+        <div class="content-oga">
+            <h2 class="subtitle">Abstract</h2>
+            <p>While the UW Office of Global Affairs (OGA) relies on the Global Publications Dashboard to showcase UW faculty’s 
+            scholarship and worldwide collaborations, its user retention has decreased since the data source became outdated in 2019.
+            Some users couldn’t find the desired information, such as statistics regarding the department’s global presence and 
+            international co-authorship. Additionally, some faculties’ work has not been acknowledged.</p>
+            
+            <p>
+            To address this issue, we retrieved 2 million rows of up-to-date data, improved the name-matching process, 
+            added indexing to increase database performance, and developed a networking tool to empower UW faculties to 
+            enhance global engagement and facilitate research collaboration.
+            </p>
+
+            <h2 class="subtitle">Project Overview</h2>
+            <p>
+                The UW Office of Global Affairs (OGA) relies on the Global Publications Dashboard to 
+                showcase UW faculty publications and co-authorships. While this tool is important for 
+                demonstrating the influence of UW faculty and alumni on academic publications worldwide, 
+                its user retention has decreased since the data source became outdated in 2019. Our project aims 
+                to update the dashboard with current data from the OpenAlex API and enhance the website's functionality 
+                with user-centered features.
+            </p>
+
+            <h2 class="subtitle">Target Stakeholders</h2>
+            <p>
+                Stakeholders can access the Rosetta website through OGA's website. 
+                They will be able to view the dashboard to get an understanding of UW's publications and co-authorships 
+                around the world. However, since our website mainly serves UW faculties, users will need to log in with 
+                their UW credentials in order to utilize advanced features such as the Publications and the Scholars page. 
+                This is to maintain data integrity and for the development team to keep track of users' information as we allow 
+                users to upload their work. We want to prevent users from claiming publications that don't belong to them and 
+                support users from refreshing the database when they manually upload their work.
+            </p>
+
+            <h2 class="subtitle">Our Solution</h2>
+            <h3 class="solution">Refreshed Data Dashboard</h3>
+                <p>
+                    Since Microsoft Academic Graph stopped providing services, OGA decided to switch to OpenAlex as a new data 
+                    source. We wrote a Python script to call on OpenAlex API and extracted 2M rows of updated publications data. 
+                    The output dataset is published to OGA's MySQL server after going through another name-matching process 
+                    with the UW HR database to facilitate data management and workflow at the production level. 
+                    Therefore, we are able to visualize the global impact of the university by publishing a Tableau dashboard 
+                    connected to the MySQL database.
+                </p>
+            <h3 class="solution">Networking Tool</h3>
+                <p>
+                    After having stakeholder interviews and user testings, we noticed that our stakeholders, 
+                    UW faculties, are interested in the percentile of UW's relationship with other institutions 
+                    as well as connecting with scholars whose publications they are interested in. Hence, we developed a 
+                    networking tool where users can browse scholars' profiles and reach out to others via email. 
+                    They can also bookmark publications that they want to come back to later and find these publications under 
+                    their profile page. We also encourage scholars to manually upload their publications to help 
+                    refresh our database.
+                </p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Last Update: 2024-11-25</h3>
+            </div>
+            <div class="footer-section footer-center">
+                <h3>&copy; 2024 Vivian Yu</h3>
+            </div>
+            <div class="footer-section">
+                <div class="social-media">
+                    <a href="mailto:peiwen.vivian.yu@gmail.com" target="_blank"`><img src="./img/mail.png" alt="Mail" width="28" height="28"></a>
+                    <a href="https://www.instagram.com/peiwen_yu/" target="_blank"><img src="./img/whiteIG.png" alt="Instagram" width="25" height="25"></a>
+                    <a href="https://github.com/PEIWEN-Vivian-Yu" target="_blank"><img src="./img/github-logo.png" alt="Github" width="25" height="25"></a>
+                    <a href="http://www.linkedin.com/in/vivian-yu-peiwen" target="_blank"><img src="./img/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
